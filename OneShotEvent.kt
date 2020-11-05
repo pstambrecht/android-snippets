@@ -28,7 +28,7 @@ class OneShotEvent<T> constructor(value: T?) {
 
     /**
      * Returns whether event has been already fired or not.
-     * @return true if case when event has been already fired, false otherwise
+     * @return true in case when event has been already fired, false otherwise
      */
     fun isFired(): Boolean = synchronized(lock) {
         return data == tombstone
